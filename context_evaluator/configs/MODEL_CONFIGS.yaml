@@ -1,0 +1,182 @@
+# Model Configurations
+# Contains model-specific information obtained from OpenAI documentation.
+# Includes support for vision, pricing, and API details.
+
+# GPT-5.2 Models
+gpt-5.2:
+  supports_vision: true
+  supports_video: false  # Videos need to be converted to frames
+  api_type: responses  # Uses Responses API
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 1.75
+    output_tokens_per_million: 14.0
+    cached_input_discount: 0.90  # 90% discount on cached inputs
+  reasoning_effort:
+    - none
+    - low
+    - medium
+    - high
+    - xhigh
+  default_reasoning_effort: none
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  image_detail_levels:
+    - low
+    - high
+    - auto
+  aliases:
+    - gpt-5.2-chat-latest
+
+gpt-5.2-pro:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 3.50  # Higher pricing for Pro
+    output_tokens_per_million: 28.0
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - none
+    - low
+    - medium
+    - high
+    - xhigh
+  default_reasoning_effort: medium
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  image_detail_levels:
+    - low
+    - high
+    - auto
+
+gpt-5.2-codex:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 1.75
+    output_tokens_per_million: 14.0
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - low
+    - medium
+    - high
+    - xhigh
+  default_reasoning_effort: medium
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  description: Optimized for agentic coding tasks
+
+# GPT-5.1 Models
+gpt-5.1:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 1.50
+    output_tokens_per_million: 12.0
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - none
+    - low
+    - medium
+    - high
+  default_reasoning_effort: none
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  image_detail_levels:
+    - low
+    - high
+    - auto
+
+gpt-5.1-codex:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 1.50
+    output_tokens_per_million: 12.0
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - low
+    - medium
+    - high
+  default_reasoning_effort: medium
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  description: Optimized for agentic coding in Codex
+
+# GPT-5 Models
+gpt-5:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 1.25
+    output_tokens_per_million: 10.0
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - minimal
+    - low
+    - medium
+    - high
+  default_reasoning_effort: medium
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  image_detail_levels:
+    - low
+    - high
+    - auto
+
+gpt-5-mini:
+  supports_vision: true
+  supports_video: false
+  api_type: responses
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 0.30
+    output_tokens_per_million: 1.20
+    cached_input_discount: 0.90
+  reasoning_effort:
+    - minimal
+    - low
+    - medium
+    - high
+  default_reasoning_effort: medium
+  verbosity_levels:
+    - low
+    - medium
+    - high
+  default_verbosity: medium
+  description: Faster, cost-efficient version of GPT-5
