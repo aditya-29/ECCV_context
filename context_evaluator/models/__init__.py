@@ -4,12 +4,14 @@ from context_evaluator.models.base import (
     PayloadTooLargeException,
     RetryableErrorType
 )
-from context_evaluator.models.providers import OpenAIInference
+from context_evaluator.models.providers import OpenAIInference, GeminiInference, ClaudeInference
 
 __all__ = [
     'BaseModel',
     'RateLimitException',
     'PayloadTooLargeException',
     'RetryableErrorType',
-    'OpenAIInference'
+    'OpenAIInference',
+    'GeminiInference',
+    'ClaudeInference'
 ]

@@ -180,3 +180,69 @@ gpt-5-mini:
     - high
   default_verbosity: medium
   description: Faster, cost-efficient version of GPT-5
+
+# Google Gemini Models
+gemini-2.0-flash-exp:
+  supports_vision: true
+  supports_video: true  # Gemini has native video support
+  api_type: generative  # Uses Generative AI API
+  max_tokens: 8192
+  context_window: 1000000  # 1M token context window
+  pricing:
+    input_tokens_per_million: 0.075
+    output_tokens_per_million: 0.30
+    cached_input_discount: 0.875  # 87.5% discount (1/8th price)
+  description: Fast and versatile multimodal model with native video support
+
+gemini-2.0-pro-exp:
+  supports_vision: true
+  supports_video: true
+  api_type: generative
+  max_tokens: 8192
+  context_window: 2000000  # 2M token context window
+  pricing:
+    input_tokens_per_million: 1.25
+    output_tokens_per_million: 5.0
+    cached_input_discount: 0.875
+  description: Most capable Gemini model with extended context
+
+gemini-2.0-flash-thinking-exp:
+  supports_vision: true
+  supports_video: true
+  api_type: generative
+  max_tokens: 8192
+  context_window: 32000
+  pricing:
+    input_tokens_per_million: 0.075
+    output_tokens_per_million: 0.30
+    cached_input_discount: 0.875
+  thinking_modes:
+    - enabled
+    - disabled
+  default_thinking_mode: enabled
+  description: Flash model with enhanced reasoning capabilities
+
+# Anthropic Claude Models
+claude-opus-4-5-20251101:
+  supports_vision: true
+  supports_video: false  # Videos converted to frames
+  api_type: messages  # Uses Messages API
+  max_tokens: 16384
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 15.0
+    output_tokens_per_million: 75.0
+    cached_input_discount: 0.90  # 90% discount on prompt caching
+  description: Most capable Claude model with extended thinking
+
+claude-sonnet-4-5-20250929:
+  supports_vision: true
+  supports_video: false
+  api_type: messages
+  max_tokens: 8192
+  context_window: 200000
+  pricing:
+    input_tokens_per_million: 3.0
+    output_tokens_per_million: 15.0
+    cached_input_discount: 0.90
+  description: Balanced intelligence and speed for most tasks
